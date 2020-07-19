@@ -1,0 +1,52 @@
+<!--
+    Question 4:
+         Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,
+Square root, Percentage.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>calc</title>
+</head>
+<body>
+<h2>calc</h2>
+Enter 1 for addition.
+Enter 2 for subtraction.
+3 for multiplication.4for div.5 for sqrt 6 for precentage.
+<script>
+let val = prompt("enter two values and oparation u want to perform");
+let ar = val.split(" ");
+let a = +ar[0];
+let b = +ar[1];
+let choice= +ar[2];
+if(choice==1)
+{
+console.log("Adddition is"+ a+b);
+}
+else if(choice==2)
+{
+console.log("sub. is" +a-b);
+}
+else if(choice==3)
+{
+console.log("mul. is "+a*b);
+}
+else if(choice==4)
+{
+console.log("div is"+a/b);
+}
+else if(choice==5)
+{
+console.log("sqrt is"+Math.sqrt(a));
+console.log(Math.sqrt(b));
+}
+else if(choice==6)
+{
+console.log("percentage is"+(100*b)/a);
+}
+
+</script>
+</body>
+</html>

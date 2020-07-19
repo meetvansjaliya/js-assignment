@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>distructuring</title>
+</head>
+<body>
+<h2>Distructuring the objects</h2>
+<script>
+const student ={
+name:"Helsinki",
+age:24,
+projects:{
+diceGame:"Two player dice game using Javascript",
+},
+}
+const{name,age, projects:{diceGame}}=student;
+console.log(name,age,diceGame);
+</script>
+</body>
+</html>

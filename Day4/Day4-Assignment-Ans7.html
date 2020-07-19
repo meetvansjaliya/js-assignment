@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>prime</title>
+</head>
+<body>
+<h2>prime</h2>
+<script>
+let num = +prompt("enter number");
+for (var j = 2; j <= num; j++) {
+
+    var notPrime = false;
+    for (var i = 2; i <= j; i++) {
+        if (j%i===0 && i!==j) {
+            notPrime = true;
+        }
+    }
+    if (notPrime === false) {
+                console.log(j);
+    }
+}
+
+</script>
+</body>
+</html>
+
