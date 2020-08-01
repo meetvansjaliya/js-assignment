@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Stopwatch</title>
+        <style type="text/css">
+            body{
+                background:black;
+                color:#f6f6f6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .stopwatch{
+                font-size: 15em;
+                font-family: monospace;
+            }
+        
+
+        </style>
+    </head>
+</html>
+<body>
+    <div class="controls">
+        <button onclick="start()">start</button>
+        <button onclick="pause()">pause</button>
+        <button onclick="stop()">stop</button>
+        
+       
+    </div>
+    <div class="stopwatch">00:00:00</div>
+    <ul class="laps"></ul>
+    <script type="text/javascript">
+    //Initialize MilliSeconds, Seconds, Minutes
+    var ms =0,s=0, m=0;
+    var timer;
+    var stopwatchEl = document.querySelector('.stopwatch');
+    var lapsContainer = document.querySelector('.laps');
+    
+    //To start the stopwatch
+    function start(){
+        if(!timer){
+        timer = setInterval(run,10);
+        }
+    }
+    //To run stopwatch
+    function run(){
+        stopwatchEl.textContent = m + ":" + s + ":" + ms;
+        ms++;
+        if(ms==100)
+        {
+            ms=0;
+            s++;
+        }
+        if(s==60){
+            s=0;
+            m++;
+        }
+    }
+     //To pause stopwatch
+    function pause(){
+        clearInterval(timer);
+        timer = false;
+    }
+     //To stop stopwatch
+    function stop(){
+        clearInterval(timer);
+        timer = false;
+        m=0;
+        s=0
+        ms=0
+        stopwatchEl.textContent = m + ":" + s + ":" + ms;
+    }
+    </script>
+</body>
